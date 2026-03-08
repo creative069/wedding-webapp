@@ -1,0 +1,170 @@
+.slideshow {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center 35%;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-repeat: no-repeat; */
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+  animation: kenburns 5s ease-in-out forwards;
+}
+
+/* Dark transparent overlay for readability */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Content container centered */
+.content {
+  position: relative;
+  z-index: 2;
+  color: #eee;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+}
+
+/* Couple names */
+.content h1 {
+  font-size: 4rem;
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.gold {
+  color: #c5a06e;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin: 10px 0 30px;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+/* Date and location */
+.date-location {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* Pagination dots */
+.dots {
+  margin: 40px 0 20px;
+  cursor: pointer;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 7px;
+  background-color: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #c5a06e;
+}
+
+/* Calendar button */
+.calendar-btn {
+  border: 1.5px solid #c5a06e;
+  background: transparent;
+  color: #c5a06e;
+  padding: 12px 25px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.calendar-btn:hover {
+  background-color: #c5a06e;
+  color: #222;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* add below */
+.slide-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: kenburns 5s ease-in-out forwards;
+}
+
+.invitation-section {
+  background-color: #f5f2eb;
+  text-align: center;
+  padding: 80px 40px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.invitation-label {
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  color: #c5a06e;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.invitation-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.invitation-body {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.invitation-note {
+  font-size: 0.95rem;
+  color: #999;
+  letter-spacing: 1px;
+}
