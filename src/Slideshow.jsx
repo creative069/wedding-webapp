@@ -48,7 +48,7 @@ export default function Slideshow() {
                   key={index}
                   className={index === current ? "slide active" : "slide"}
               >
-                  <img src={slide.image} className="slide-image" style={{ objectPosition: slide.position }} />
+                  <img src={slide.image} className="slide-image" style={{ objectPosition: slide.position }} alt="Bride and Groom Portrait" />
                   {/* Dark overlay */}
                   <div className="overlay" />
 
