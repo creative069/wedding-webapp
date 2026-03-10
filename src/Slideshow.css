@@ -5,7 +5,6 @@
   overflow: hidden;
   font-family: 'Playfair Display', serif;
 }
-
 .slide {
   position: absolute;
   width: 100%;
@@ -17,16 +16,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-repeat: no-repeat; */
 }
-
 .slide.active {
   opacity: 1;
   z-index: 1;
   animation: kenburns 5s ease-in-out forwards;
 }
-
-/* Dark transparent overlay for readability */
 .overlay {
   position: absolute;
   width: 100%;
@@ -36,8 +31,6 @@
   left: 0;
   z-index: 1;
 }
-
-/* Content container centered */
 .content {
   position: relative;
   z-index: 2;
@@ -46,20 +39,22 @@
   max-width: 700px;
   padding: 20px;
 }
-
-/* Couple names */
 .content h1 {
   font-size: 4rem;
   margin: 0 0 10px;
   font-weight: 700;
   color: #f1f1f1;
+  white-space: nowrap;
 }
-
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: clamp(1.6rem, 8vw, 2.8rem);
+    white-space: nowrap;
+  }
+}
 .gold {
   color: #c5a06e;
 }
-
-/* Subtitle */
 .subtitle {
   font-size: 1.2rem;
   letter-spacing: 3px;
@@ -67,20 +62,14 @@
   text-transform: uppercase;
   color: #ccc;
 }
-
-/* Date and location */
 .date-location {
   font-size: 1.1rem;
   margin-bottom: 30px;
   color: #ddd;
 }
-
-/* Pagination dots */
 .dots {
   margin: 40px 0 20px;
-  cursor: pointer;
 }
-
 .dot {
   height: 12px;
   width: 12px;
@@ -91,12 +80,9 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .dot.active {
   background-color: #c5a06e;
 }
-
-/* Calendar button */
 .calendar-btn {
   border: 1.5px solid #c5a06e;
   background: transparent;
@@ -109,21 +95,14 @@
   font-weight: 600;
   border-radius: 6px;
 }
-
 .calendar-btn:hover {
   background-color: #c5a06e;
   color: #222;
 }
-
 @keyframes kenburns {
-  0% {
-    transform: scale(1.08);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
-/* add below */
 .slide-image {
   position: absolute;
   width: 100%;
@@ -132,12 +111,13 @@
   animation: kenburns 5s ease-in-out forwards;
 }
 
+/* ── Invitation Section ── */
 .invitation-section {
   background-color: #f5f2eb;
   text-align: center;
   padding: 80px 40px;
-  max-width: 100%;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .invitation-label {
@@ -146,6 +126,7 @@
   color: #c5a06e;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-family: sans-serif;
 }
 
 .invitation-heading {
@@ -154,6 +135,9 @@
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 30px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .invitation-body {
@@ -161,10 +145,27 @@
   color: #333;
   line-height: 1.8;
   margin-bottom: 20px;
+  font-family: sans-serif;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .invitation-note {
   font-size: 0.95rem;
   color: #999;
   letter-spacing: 1px;
+  font-family: sans-serif;
+}
+
+@media (max-width: 480px) {
+  .invitation-heading {
+    font-size: 2rem;
+  }
+  .invitation-body {
+    font-size: 0.95rem;
+  }
+  .invitation-section {
+    padding: 60px 20px;
+  }
 }
