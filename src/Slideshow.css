@@ -169,10 +169,10 @@
     padding: 60px 20px;
   }
 }
-
-@media (max-width: 480px) {
+/* 
+@media (max-width: 680px) {
   .slide-image {
     object-fit: contain;
     background-color: #000;
   }
-}
+} */
