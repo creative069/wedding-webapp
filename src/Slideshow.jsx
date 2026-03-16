@@ -18,7 +18,7 @@ const addToCalendar = () => {
 
 const slides = [
   {
-    image: "/images/gemini1.jpg",
+    image: "/images/pavi-robin-slide.jpeg",
     position: "center center"
   },
   {
